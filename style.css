@@ -18,22 +18,14 @@ html {
 }
 
 body {
-    /* CHANGED: New bold font, larger size */
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* This ensures the font is bold */
-    font-size: 18px;  /* Increased from default (around 15-16px) */
-    
+    font-weight: 700;
+    font-size: 18px;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #1A1A1A;
     color: #EEEEEE;
-}
-
-header {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #2C2C2C;
 }
 
 section {
@@ -68,8 +60,6 @@ ul {
     padding: 0;
 }
 
----
-
 /* =============== NAVIGATION BAR STYLES =============== */
 nav {
     background: #1A1A1A;
@@ -98,8 +88,6 @@ nav ul li a:hover {
     background-color: #FF7A00;
     color: #1A1A1A;
 }
-
----
 
 /* =============== PROJECT CARD STYLES =============== */
 .projects-container {
@@ -147,4 +135,25 @@ nav ul li a:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0px #000000;
     text-decoration: none;
+}
+
+/* =============== HEADER LAYOUT & PROFILE PHOTO =============== */
+header {
+    display: flex;
+    align-items: center; /* Vertically centers items */
+    text-align: left;
+    padding: 40px 60px;
+    background-color: #2C2C2C;
+    gap: 40px; /* Adds space between the photo and the text */
+}
+
+#profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 0; /* This makes the photo a square */
+    object-fit: cover;
+    border: 7px solid transparent;
+    background: linear-gradient(#2C2C2C, #2C2C2C) padding-box,
+                linear-gradient(to right, #FF7A00, #F0A04B) border-box;
+    box-shadow: 0 0 15px rgba(255, 122, 0, 0.7);
 }
