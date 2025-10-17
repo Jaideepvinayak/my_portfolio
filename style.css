@@ -1,10 +1,15 @@
-/* =============== NEW CHARCOAL & ORANGE THEME =============== */
+/* =============== BLOCKY ORANGE & BLACK THEME =============== */
+
+/* Import a bold, clean font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 
 /* Color Palette:
-   - Charcoal Black: #222831
-   - Mid-Tone Gray: #393E46
-   - Vibrant Orange: #D65A31
+   - Near Black: #1A1A1A
+   - Dark Gray: #2C2C2C
+   - Vibrant Orange: #FF7A00
    - Off-White Text: #EEEEEE
+   - Hard Shadow Black: #000000
 */
 
 /* =============== GENERAL STYLES =============== */
@@ -13,43 +18,49 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    /* CHANGED: New bold font, larger size */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* This ensures the font is bold */
+    font-size: 18px;  /* Increased from default (around 15-16px) */
+    
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #222831; /* Charcoal background */
-    color: #EEEEEE; /* Off-white text */
+    background-color: #1A1A1A;
+    color: #EEEEEE;
 }
 
 header {
     text-align: center;
     padding: 60px 20px;
-    background: #393E46; /* Mid-tone gray for header */
+    background-color: #2C2C2C;
 }
 
 section {
     padding: 40px 20px;
-    margin-bottom: 20px;
-    background: #393E46; /* Mid-tone gray for sections */
-    border-radius: 8px;
+    margin: 0 auto 20px auto;
+    background: #2C2C2C;
     max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+    border: 4px solid #FF7A00;
+    box-shadow: 6px 6px 0px #000000;
+    border-radius: 0;
 }
 
-h1, h2, h3 {
-    color: #EEEEEE; /* Off-white headings */
+h1, h2 {
+    color: #FF7A00;
+}
+
+h3 {
+    color: #EEEEEE;
 }
 
 a {
-    color: #D65A31; /* Orange links */
+    color: #FF7A00;
     text-decoration: none;
-    transition: opacity 0.3s;
 }
 
 a:hover {
-    opacity: 0.8; /* Slightly fade on hover */
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 ul {
@@ -61,12 +72,12 @@ ul {
 
 /* =============== NAVIGATION BAR STYLES =============== */
 nav {
-    background: #222831; /* Darkest charcoal for navbar */
+    background: #1A1A1A;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 2px solid #D65A31; /* Orange bottom border */
+    border-bottom: 4px solid #FF7A00;
 }
 
 nav ul {
@@ -79,13 +90,13 @@ nav ul {
 nav ul li a {
     display: block;
     padding: 15px 20px;
-    color: #EEEEEE; /* Off-white links */
-    transition: background-color 0.3s;
+    color: #EEEEEE;
+    transition: none;
 }
 
 nav ul li a:hover {
-    background-color: #D65A31; /* Orange background on hover */
-    color: #222831; /* Dark text on hover for contrast */
+    background-color: #FF7A00;
+    color: #1A1A1A;
 }
 
 ---
@@ -95,28 +106,45 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
 
 .project-card {
-    background: #222831; /* Darker charcoal for cards */
-    border: 1px solid #393E46;
-    border-radius: 8px;
+    background: #1A1A1A;
+    border: 4px solid #FF7A00;
+    border-radius: 0;
     padding: 20px;
     width: 300px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 6px 6px 0px #000000;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Lift card on hover */
-    box-shadow: 0 4px 15px rgba(214, 90, 49, 0.4); /* Orange glow on hover */
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0px #000000;
 }
 
 .project-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border: 3px solid #2C2C2C;
+    border-radius: 0;
     margin-bottom: 15px;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #FF7A00;
+    color: #1A1A1A;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    margin-top: 10px;
+}
+
+.project-card a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000000;
+    text-decoration: none;
 }
